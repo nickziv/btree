@@ -1,0 +1,6 @@
+Not sure where this btree impl is from.
+
+Or what license it uses. I am pretty sure it was under some version of the GPL.
+So distribute changes accordingly.
+
+Either way, don't use it in production code.
