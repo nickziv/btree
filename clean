@@ -1,0 +1,4 @@
+#!/bin/ksh
+
+rm `ls | egrep -e '\.o$'`
+rm b_tree

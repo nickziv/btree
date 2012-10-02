@@ -1,0 +1,11 @@
+#!/bin/ksh
+
+cmplr="cc"
+cflags="-m64"
+libs="-ldtrace"
+
+dtrace -h -s btree_provider.d
+$cmplr $cflags -c btree.c
+$cmplr $cflags -c main.c
+dtrace -G -64 -s btree_provider.d btree.o main.o
+$cmplr $cflags -o b_tree btree.o main.o btree_provider.o $libs
